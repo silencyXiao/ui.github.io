@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>list图文列表</title>
+	<link href="static/style/reset.css" rel="stylesheet">
+</head>
+<style>
+body{ background-color: #f1f1f1; font-family: 'Microsoft Yahei'; }	
+.list-graphic{
+
+}
+.list-graphic>.item{
+	float: left;
+}
+.list-graphic>.full{
+	float: none;
+	margin-bottom: 10px;
+}
+.list-graphic>.item>.inner{ 
+	background-color: #fff;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.list-graphic>.item>.inner>.head{
+	width: 100%;
+}
+.list-graphic>.full>.inner>.head{
+	float: left;
+	width: 480px;
+}
+.list-graphic>.full>.inner>.head .picture{
+	width: 480px;
+	height: 300px !important;
+}
+.list-graphic>.item>.inner>.head a,
+.list-graphic>.item>.inner>.head .picture{
+	display: block;
+	width: 100%;
+}
+.list-graphic>.item>.inner>.body{
+	background-color: #fff;
+}
+.list-graphic>.full>.inner>.body,
+.list-graphic>.full>.inner>.foot{
+	margin-left: 500px;
+}
+.list-graphic>.item>.inner>.body .title{
+	height:24px;
+	line-height: 24px;
+	padding:6px 10px;
+	border-bottom:1px dotted #eee;
+	font-size: 16px;
+	font-weight: normal;	
+}
+.list-graphic>.item>.inner>.body .title a{
+	color: #666;
+	text-decoration: none;
+}
+.list-graphic>.item>.inner>.body .title a:hover{
+	color: #f60;
+}
+.list-graphic>.item>.inner>.body .info{
+	height: 66px;
+	padding: 5px 10px;
+	line-height: 22px;
+	font-size: 12px;
+	color: #999;
+	overflow: hidden;
+}
+.list-graphic>.item>.inner>.foot{
+	height: 28px;
+	line-height: 28px;
+	padding:6px 10px;
+	border-top:1px solid #eee;
+	background-color: #f8f8f8;
+	font-size: 14px;
+	color: #666;
+}
+.list-graphic>.item>.inner>.foot .button{
+	float: right;
+	width: 80px;
+	height: 28px;
+	line-height: 28px;
+	border-radius: 3px;
+	background-color: #61A62F;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+}
+.list-graphic>.item>.inner>.foot .price{
+	color: #f90;
+	font-size: 16px;
+}
+.tab-wrap{
+	width: 1000px; 
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid #ddd;
+	margin-left:auto;
+	margin-right: auto;
+	background-color: #fff;	
+	text-align: right;
+}
+.tab{
+	float: left;
+	height: 40px;
+	line-height: 40px;
+}
+.tab>.item{
+	float: left;
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	text-align: center;
+}
+.tab>.item.active{
+	background-color: #f5f5f5;
+	border-left:1px solid #ddd;
+	border-right:1px solid #ddd;
+	color:#333;
+}
+.tab-wrap span{ margin-right: 10px; }
+.tab-wrap strong{ color:red; }
+
+.aside-left{
+	float: left;
+	width: 200px;
+	padding:20px 30px;
+	border-right:1px solid #ccc;
+	background-color: #fff;
+}
+.form-filter .form-item{
+	height: 30px;
+	line-height: 30px;
+	margin-bottom: 5px;
+}
+.form-filter .form-item label{
+	float: left;
+	width: 7em;
+	height: 30px;
+	line-height: 30px;
+	text-align: right;
+}
+.form-filter .form-item  input{
+	width: 100px;
+	height: 18px;
+	padding:2px;
+}
+.container{
+	margin-left: 260px;
+	padding:20px;
+}
+</style>
+<body>
+<!-- <div class="tab-wrap mt20 mb20">
+	<div class="tab" id="tab">
+		<a href="javascript:void(0);" class="item">一行一列</a>
+		<a href="javascript:void(0);" class="item">一行两列</a>
+		<a href="javascript:void(0);" class="item active">一行三列</a>
+		<a href="javascript:void(0);" class="item">一行四列</a>
+	</div>
+	<span>列表容器宽度：<strong id="fullWidth"></strong></span>
+	<span>列表项宽度：<strong id="itemWidth"></strong></span>
+	<span>列表个数：<strong id="itemNumber"></strong></span>
+	<span>列表项间距：<strong id="spacing"></strong></span>
+</div> -->
+<div class="aside-left">
+	<form class="form-filter" action="">
+		<div class="form-item">
+			<label for="">列表列数：</label>
+			<select name="" id="column">
+				<option value="3">3列</option>
+				<option value="1">1列</option>
+				<option value="2">2列</option>
+				<option value="4">4列</option>
+				<option value="5">5列</option>
+				<option value="6">6列</option>
+			</select>
+		</div>
+		<div class="form-item">
+			<label for="">图片宽高比例：</label>
+			<select name="" id="picScale">
+				<option value="10/16">16:10</option>
+				<option value="9/16">16:9</option>
+				<option value="3/4">4:3</option>
+				<option value="1/3">3:1</option>
+				<option value="1/2">2:1</option>
+				<option value="1">1:1</option>
+			</select>
+		</div>
+		<div class="form-item">
+			<label for="">列表项间距：</label>
+			<input type="text" id="spacing" value="20" placeholder="请输入列表项间距">
+		</div>
+		<div class="form-item">
+			<label for="">列表项内间距：</label>
+			<input type="text" id="padding" value="0" placeholder="请输入列表项内间距">
+		</div>
+		<div class="form-item">
+			<label for="">容器总宽度：</label>
+			<input type="text" id="fullWidth" value="1000" placeholder="请输入容器总宽度：">
+		</div>
+	</form>
+</div>
+<div class="container">
+	<ul class="list-graphic clearfix" id="grid">
+		<li class="item">
+			<div class="inner clearfix">
+				<div class="head"><a href="#"><img class="picture" src="img/img.jpg"></a></div>	
+				<div class="body">
+					<h3 class="title"><a href="#">新加坡-马来西亚4晚3日游</a></h3>
+					<div class="info">
+						新加坡珠宝专卖店（80分钟） 出售:钻石、宝石、玉器、银饰 新加坡药油百货专卖店(40分钟） 出售：药油、土产及其他纪念品 【印度风情之旅】 前往新加坡印度人聚居地—【小印度】，参观【印度庙】（约30分钟），感受当地印度人的生活。 前往马来西亚首都吉隆坡近郊海滨城市波德申（约5个小时/此段路程较长，团友可在车上休息），途中享用晚餐。
+					</div>
+				</div>
+				<div class="foot">
+					<a class="button" href="#">立即预定</a>
+					<p>同行价：<strong class="price">￥2990</strong></p>		
+				</div>
+			</div>
+		</li>
+		<li class="item">
+			<div class="inner clearfix">
+				<div class="head"><a href="#"><img class="picture" src="img/img.jpg"></a></div>	
+				<div class="body">
+					<h3 class="title"><a href="#">新加坡-马来西亚4晚3日游</a></h3>
+					<div class="info">
+						新加坡珠宝专卖店（80分钟） 出售:钻石、宝石、玉器、银饰 新加坡药油百货专卖店(40分钟） 出售：药油、土产及其他纪念品 【印度风情之旅】 前往新加坡印度人聚居地—【小印度】，参观【印度庙】（约30分钟），感受当地印度人的生活。 前往马来西亚首都吉隆坡近郊海滨城市波德申（约5个小时/此段路程较长，团友可在车上休息），途中享用晚餐。
+					</div>
+				</div>
+				<div class="foot">
+					<a class="button" href="#">立即预定</a>
+					<p>同行价：<strong class="price">￥2990</strong></p>		
+				</div>
+			</div>
+		</li>
+		<li class="item">
+			<div class="inner clearfix">
+				<div class="head"><a href="#"><img class="picture" src="img/img.jpg"></a></div>	
+				<div class="body">
+					<h3 class="title"><a href="#">新加坡-马来西亚4晚3日游</a></h3>
+					<div class="info">
+						新加坡珠宝专卖店（80分钟） 出售:钻石、宝石、玉器、银饰 新加坡药油百货专卖店(40分钟） 出售：药油、土产及其他纪念品 【印度风情之旅】 前往新加坡印度人聚居地—【小印度】，参观【印度庙】（约30分钟），感受当地印度人的生活。 前往马来西亚首都吉隆坡近郊海滨城市波德申（约5个小时/此段路程较长，团友可在车上休息），途中享用晚餐。
+					</div>
+				</div>
+				<div class="foot">
+					<a class="button" href="#">立即预定</a>
+					<p>同行价：<strong class="price">￥2990</strong></p>		
+				</div>
+			</div>
+		</li>
+		<li class="item">
+			<div class="inner clearfix">
+				<div class="head"><a href="#"><img class="picture" src="img/img.jpg"></a></div>	
+				<div class="body">
+					<h3 class="title"><a href="#">新加坡-马来西亚4晚3日游</a></h3>
+					<div class="info">
+						新加坡珠宝专卖店（80分钟） 出售:钻石、宝石、玉器、银饰 新加坡药油百货专卖店(40分钟） 出售：药油、土产及其他纪念品 【印度风情之旅】 前往新加坡印度人聚居地—【小印度】，参观【印度庙】（约30分钟），感受当地印度人的生活。 前往马来西亚首都吉隆坡近郊海滨城市波德申（约5个小时/此段路程较长，团友可在车上休息），途中享用晚餐。
+					</div>
+				</div>
+				<div class="foot">
+					<a class="button" href="#">立即预定</a>
+					<p>同行价：<strong class="price">￥2990</strong></p>		
+				</div>
+			</div>
+		</li>
+		<li class="item">
+			<div class="inner clearfix">
+				<div class="head"><a href="#"><img class="picture" src="img/img.jpg"></a></div>	
+				<div class="body">
+					<h3 class="title"><a href="#">新加坡-马来西亚4晚3日游</a></h3>
+					<div class="info">
+						新加坡珠宝专卖店（80分钟） 出售:钻石、宝石、玉器、银饰 新加坡药油百货专卖店(40分钟） 出售：药油、土产及其他纪念品 【印度风情之旅】 前往新加坡印度人聚居地—【小印度】，参观【印度庙】（约30分钟），感受当地印度人的生活。 前往马来西亚首都吉隆坡近郊海滨城市波德申（约5个小时/此段路程较长，团友可在车上休息），途中享用晚餐。
+					</div>
+				</div>
+				<div class="foot">
+					<a class="button" href="#">立即预定</a>
+					<p>同行价：<strong class="price">￥2990</strong></p>		
+				</div>
+			</div>
+		</li>
+		<li class="item">
+			<div class="inner clearfix">
+				<div class="head"><a href="#"><img class="picture" src="img/img.jpg"></a></div>	
+				<div class="body">
+					<h3 class="title"><a href="#">新加坡-马来西亚4晚3日游</a></h3>
+					<div class="info">
+						新加坡珠宝专卖店（80分钟） 出售:钻石、宝石、玉器、银饰 新加坡药油百货专卖店(40分钟） 出售：药油、土产及其他纪念品 【印度风情之旅】 前往新加坡印度人聚居地—【小印度】，参观【印度庙】（约30分钟），感受当地印度人的生活。 前往马来西亚首都吉隆坡近郊海滨城市波德申（约5个小时/此段路程较长，团友可在车上休息），途中享用晚餐。
+					</div>
+				</div>
+				<div class="foot">
+					<a class="button" href="#">立即预定</a>
+					<p>同行价：<strong class="price">￥2990</strong></p>		
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>	
+
+
+<script src="static/lib/jquery-1.8.3.min.js"></script>
+<script>
+$(function(){
+
+	var clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+	$('.aside-left').height(clientHeight-40);
+	var column = $('#column'),
+		picScale =  $('#picScale'),
+		spacing = $('#spacing'),
+		padding = $('#padding'),
+		fullWidth = $('#fullWidth');
+	listGrid(fullWidth.val(),column.val(),spacing.val(),toFloat(picScale.val()),padding.val());
+
+	column.change(function(){
+		if(Number(column.val())===1){
+			$('#grid>li').addClass('full');
+		}else{
+			$('#grid>li').removeClass('full');	
+		}
+		listGrid(fullWidth.val(),column.val(),spacing.val(),toFloat(picScale.val()),padding.val());
+	});
+	picScale.change(function(){
+		listGrid(fullWidth.val(),column.val(),spacing.val(),toFloat(picScale.val()),padding.val());
+	});
+
+	spacing.keyup(function(){
+		listGrid(fullWidth.val(),column.val(),spacing.val(),toFloat(picScale.val()),padding.val());
+	});
+
+	padding.keyup(function(){
+		listGrid(fullWidth.val(),column.val(),spacing.val(),toFloat(picScale.val()),padding.val());
+	});
+
+	fullWidth.keyup(function(){
+		listGrid(fullWidth.val(),column.val(),spacing.val(),picScale.val(),padding.val());
+	});
+});	
+/*
+ * param 参数
+ * fullWidth: 列表容器总宽度
+ * column: 列表列数
+ * spacing: 列表项间距
+ * picScale: 图片比例
+ * pdding: 列表项内边距
+ */
+function listGrid(fullWidth,column,spacing,picScale,pdding){
+	var grid = $('#grid'),
+		item = grid.find('.item'),
+		inner = item.find('.inner'),
+		picture = inner.find('img'),
+		itemWidth = (fullWidth-spacing*(column-1))/column;
+		
+		//如果列表容器宽度等于列表项宽度
+		if(fullWidth===itemWidth)
+		{
+			item.addClass('item-full');
+			picture.height(((itemWidth-pdding)/2)*picScale);
+
+		}else{
+			item.removeClass('item-full');
+			picture.height(itemWidth*picScale-pdding*2);
+		}
+		grid.css({
+			'width':Number(fullWidth)+Number(spacing),
+			'margin':-spacing/2
+		});
+		item.css({
+			'width':itemWidth,
+			'padding':spacing/2+'px'
+		});
+		inner.css({
+			'width':itemWidth-2*pdding,
+			'padding':pdding	
+		});
+
+}
+
+function  toFloat(str){
+	if(Number(str)===1)
+	{
+		return Number(str);
+	}else{
+		var arr = str.split('/');
+		return Number(arr[0])/Number(arr[1]);
+	}
+}
+</script>
+</body>
+</html>
