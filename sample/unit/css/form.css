@@ -1,0 +1,237 @@
+/* 默认input输入框 和 textarea 文本框*/
+.input-text,.textarea{
+    line-height: 20px;
+    padding: 2px 6px;
+    border:1px solid #ccc;
+    border-radius: 3px;
+    background-color:#fff;
+    font-size: 12px;
+    color:#555;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);		
+    -webkit-transition: border linear .2s,box-shadow linear .2s;
+	-moz-transition: border linear .2s,box-shadow linear .2s;
+	-o-transition: border linear .2s,box-shadow linear .2s;
+	transition: border linear .2s,box-shadow linear .2s;
+}
+.input-text:focus,
+.textarea:focus{
+	border-color:#79B5E4;
+    border-color: rgba(82,168,236,0.8);
+    outline: 0;
+    outline: thin dotted \9;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(82,168,236,0.6);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(82,168,236,0.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(82,168,236,0.6);
+
+}
+
+/* 带前缀和后后缀的 input输入框*/
+.input-group{
+	display: inline-block;	
+	font-size: 0;
+	white-space: nowrap;
+	vertical-align: middle
+}
+.input-group .add{
+	display: inline-block;
+	width: auto;
+	min-width: 16px;
+	height: 20px;
+	line-height: 20px;
+	padding: 2px 6px;
+	border: 1px solid #ccc;
+	background-color: #eee;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: center;
+	text-shadow: 0 1px 0 #fff;
+}
+.input-prefix .input-text{
+	border-radius: 0 3px 3px 0;
+}
+.input-prefix .add:first-child{
+	border-radius: 3px 0 0 3px;
+	margin-right: -1px;
+}
+.input-suffix .input-text{
+	position: relative;
+	z-index: 2;
+	border-radius: 3px 0 0 3px;
+}
+.input-suffix .add:last-child{
+	position: relative;
+	z-index: 1;
+	border-radius: 0 3px 3px 0;
+	margin-left: -1px;
+}
+.input-prefix.input-suffix .input-text{
+	border-radius: 0;
+}
+
+/* 下拉菜单 */
+.select{
+	position: relative;
+	height: 26px;
+	padding:0 30px 0 6px;
+	border:1px solid #ccc;
+	border-radius: 3px;
+	background: url('../img/select_arrow.png') no-repeat right center;
+	background-color: #fff;
+	font-size: 12px;
+	color: #555;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);	
+	-moz-appearance: none;
+    -webkit-appearance:none;
+	appearance:none;   
+}
+.select:focus{
+	border-color: #bbb;
+}
+
+/* 单选按钮组 */
+.radio-group{ 
+	display: inline-block; 
+	font-size: 0;
+}
+.radio-group .input-radio{
+	display: none;
+}
+.radio-group .radio-label{
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	width: auto;
+	height: 20px;
+	line-height:20px;
+	padding:2px 8px;
+	border:1px solid #ccc;
+	margin-right:-1px;
+
+	background-color: #f5f5f5;
+	background:-moz-linear-gradient(top,#ffffff,#e6e6e6);
+  	background:-webkit-linear-gradient(top,#ffffff,#e6e6e6);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ffffff, endColorstr=#e6e6e6);/*IE<9>*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#ffffff, endColorstr=#e6e6e6)";/*IE8+*/
+
+	font-size: 12px;
+	color:#999;
+	text-shadow:1px 1px 0px #ffffff;
+	-moz-box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #FFF;
+	box-shadow:inset 0px 1px 0px 0px #FFF;
+}
+
+.radio-group .radio-label:first-of-type{
+	border-radius: 3px 0 0 3px;
+}
+.radio-group .radio-label:last-of-type{
+	border-radius: 0 3px 3px 0;
+}
+.radio-group .input-radio:checked + .radio-label{
+	position: relative;
+	z-index: 2;
+	
+	border: 1px solid #404040;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #666), color-stop(1, #333));
+	background: -moz-linear-gradient(top, #666 5%, #333 100%);
+	background: -webkit-linear-gradient(top, #666 5%, #333 100%);
+	background: -o-linear-gradient(top, #666 5%, #333 100%);
+	background: -ms-linear-gradient(top, #666 5%, #333 100%);
+	background: linear-gradient(to bottom, #666 5%, #333 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#666', endColorstr='#333',GradientType=0);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#666, endColorstr=#333)";
+	background-color: #777;
+	color: #ffffff;
+	text-shadow: 0px 1px 0px #000;
+	-moz-box-shadow: inset 0px 1px 0px 0px #888;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #888;
+	box-shadow: inset 0px 1px 0px 0px #888;
+}
+
+/* 多选按钮组 */
+.checkbox-group{
+	display: inline-block;
+}
+.checkbox-group .input-checkbox{
+	display: none;
+}
+.checkbox-group .checkbox-label{
+	display: inline-block;
+	position: relative;
+	height: 16px;
+	line-height: 16px;
+    padding: 2px 30px 2px 6px;
+    border:1px solid #ccc;
+    border-radius: 3px;
+	margin-right:5px;
+	margin-bottom:8px;
+
+    background-color: #f5f5f5;
+	background:-moz-linear-gradient(top,#ffffff,#e6e6e6);
+  	background:-webkit-linear-gradient(top,#ffffff,#e6e6e6);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ffffff, endColorstr=#e6e6e6);/*IE<9>*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#ffffff, endColorstr=#e6e6e6)";/*IE8+*/
+
+	font-size: 12px;
+	color:#999;
+	text-shadow:1px 1px 0px #ffffff;
+	-moz-box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #FFF;
+	box-shadow:inset 0px 1px 0px 0px #FFF;	
+}
+.checkbox-group .checkbox-label:after{
+	content: "";
+	position: absolute;
+	right: 0;
+	 top: 0;
+	width: 18px;
+	height: 20px;
+	border-left: 1px solid #ccc;
+	border-radius: 0 2px 2px 0;
+	background-color: #f5f5f5;
+	background:-moz-linear-gradient(top,#eeeeee,#cccccc);
+  	background:-webkit-linear-gradient(top,#eeeeee,#cccccc);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#eeeeee, endColorstr=#cccccc);/*IE<9>*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#eeeeee, endColorstr=#cccccc)";/*IE8+*/
+}
+.checkbox-group .input-checkbox:checked + .checkbox-label{
+	border-color: #bbb;
+	background-color: #fff;
+	color: #555;
+}
+.checkbox-group .input-checkbox:checked + .checkbox-label:after{
+	border-left: 1px solid #bbb;
+	background: url('../img/checkbox_arrow.png') no-repeat center center;	
+}
+
+/* btn */
+.btn{  
+  	line-height: 20px;
+  	padding: 2px 8px;
+	border: 1px solid #404040;
+	border-radius:3px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #666), color-stop(1, #333));
+	background: -moz-linear-gradient(top, #666 5%, #333 100%);
+	background: -webkit-linear-gradient(top, #666 5%, #333 100%);
+	background: -o-linear-gradient(top, #666 5%, #333 100%);
+	background: -ms-linear-gradient(top, #666 5%, #333 100%);
+	background: linear-gradient(to bottom, #666 5%, #333 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#666', endColorstr='#333',GradientType=0);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#666, endColorstr=#333)";
+	background-color: #777;
+	color: #ffffff;
+	text-shadow: 0px 1px 0px #000;
+	-moz-box-shadow: inset 0px 1px 0px 0px #888;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #888;
+	box-shadow: inset 0px 1px 0px 0px #888;
+}

@@ -2,14 +2,14 @@
 <html lang="zh-cn">
 <head>
 	<meta charset="UTF-8">
-	<title>小强ERP系统_帮助中心</title>
+	<title>ttx_UI手册</title>
 	<meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="static/style/reset.css">
-    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="/static/style/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <!-- header start-->
@@ -37,16 +37,16 @@
 	<!-- aside start-->
 	<div class="aside-left" id="asideLeft">
 		<ul class="aside-nav">
-            <li class="active"><a href="#">
-                <i class="icon24 icon24-book"></i>
+            <li class="active"><a href="javascript:void(0);">
+                <i class="icon24 icon24-layout"></i>
                 <span>布局</span>
             </a></li>
-            <li> <a href="#">
-                <i class="icon24 icon24-book"></i>
+            <li> <a href="javascript:void(0);">
+                <i class="icon24 icon24-module"></i>
                 <span>模块</span>
             </a></li>
-            <li><a href="#">
-                <i class="icon24 icon24-book"></i>
+            <li><a href="javascript:void(0);">
+                <i class="icon24 icon24-unit"></i>
                 <span>元件</span>
             </a></li>
         </ul>
@@ -75,7 +75,7 @@
                 <li class="aside-sub-nav-item" data-child="true">
                     <a class="aside-sub-nav-link" href="javascript:void(0)">列表 list</a>
                     <ul>
-                        <li><a href="list_pic.html" target="iframeContainer"><i class="icon-doc"></i>图文列表 list-pic</a></li>	
+                        <li><a target="iframeContainer" href="sample/module/list_pic.html"><i class="icon-doc"></i>图文列表 list-pic</a></li>	
                         <li><a href="#"><i class="icon-doc"></i>文字列表 list-text</a></li>
                     </ul>
                 </li>
@@ -138,7 +138,7 @@
             <!--元件 start-->
             <ul class="aside-sub-nav" style="display:none;">  
                 <li class="aside-sub-nav-item">
-                    <a class="aside-sub-nav-link" href="javascript:void(0)">表单 form</a>
+                    <a class="aside-sub-nav-link" target="iframeContainer" href="sample/unit/form.html">表单 form</a>
                 </li>
                 <li class="aside-sub-nav-item">
                     <a class="aside-sub-nav-link" href="javascript:void(0)">按钮 btn</a>
@@ -157,26 +157,11 @@
     
     <!-- content start-->
     <div class="content">
-    	<iframe id="iframeContainer" name="iframeContainer" frameborder="0"  scrolling="yes" src="list_pic.html" width="100%" style="min-width:1000px;"></iframe>
+    	<iframe id="iframeContainer" name="iframeContainer" frameborder="0"  scrolling="yes" src="sample/module/list_pic.html" width="100%" style="min-width:1000px;"></iframe>
     </div>
     <!-- content end-->
 </div>
 <!-- container end-->
-
-<!-- toolbar start-->
-<div class="toolbar" id="toolbar">
-	<ul>
-    	<li>
-            <p class="text">客服咨询</p>
-            <p class="icon-service"></p>
-        </li>
-    	<li class="totop" onClick="toTop()">
-            <p class="text">返回顶部</p>
-            <p class="icon-totop"></p>
-        </li>
-    </ul>
-</div>
-<!-- toolbar end-->
 <script type="text/javascript" src="static/lib/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="js/basic.js"></script>
 </body>
