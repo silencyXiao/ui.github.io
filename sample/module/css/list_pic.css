@@ -1,0 +1,25 @@
+
+/*
+** list-pic
+*/
+.m-list-pic{ width: 1020px; margin:-10px; }
+.m-list-pic li{ float: left; width: 320px; padding: 10px;}
+.m-list-pic li .inner{ width: 320px; background-color: #fff; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);}
+.m-list-pic li .inner .head,
+.m-list-pic li .inner .head a{ display: block; width: 100%;}
+.m-list-pic li .inner .head .pic{ display: block; width: 100%; height: 200px;}
+.m-list-pic li .inner .body{ background-color: #fff;}
+.m-list-pic li .inner .body .title{ height:24px; line-height: 24px; padding:6px 10px; border-bottom:1px dotted #eee;font-size: 16px;font-weight: normal;}
+.m-list-pic li .inner .body .title a{ color: #666; text-decoration: none;}
+.m-list-pic li .inner .body .title a:hover{ color: #f60;}
+.m-list-pic li .inner .body .info{height: 66px; padding: 5px 10px; line-height: 22px; font-size: 12px; color: #999; overflow: hidden; }
+.m-list-pic li .inner .foot{ height: 28px; line-height: 28px; padding:6px 10px; border-top:1px solid #eee; background-color: #f8f8f8; font-size: 14px; color: #666; }
+.m-list-pic li .inner .foot .button{ float: right; width: 80px; height: 28px; line-height: 28px;border-radius: 3px; background-color: #61A62F; font-size: 14px; color: #fff; text-align: center; text-decoration: none; }
+.m-list-pic li .inner .foot .price{ color: #f90; font-size: 16px;}
+
+.m-list-pic li.full{ float: none; margin-bottom: 10px;}
+.m-list-pic li.full .inner{ height: 300px; }
+.m-list-pic li.full .inner .head{float: left; width: 480px; }
+.m-list-pic li.full .inner .head .pic{ width: 480px; height: 300px !important;}
+.m-list-pic li.full .inner .body,
+.m-list-pic li.full .inner .foot{ margin-left: 500px;}

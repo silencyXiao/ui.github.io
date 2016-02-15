@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>list图文列表</title>
+<link href="/static/style/reset.css" rel="stylesheet">
+<link href="/css/iframe.css" rel="stylesheet">
+<link href="css/list_pic.css" rel="stylesheet">
+</head> 
+<body>
+<div class="aside-left">
+	<ul class="tab" id="tab">
+		<li class="active" data-anchor="preview">preview</li>
+		<li data-anchor="html">html</li>
+		<li data-anchor="css">css</li>
+		<li data-anchor="js">js</li>
+	</ul>
+	<form class="form-filter" action="">
+		<div class="form-item">
+		<label for="">列表列数：</label>
+			<select name="" id="column">
+				<option value="3">3列</option>
+				<option value="1">1列</option>
+				<option value="2">2列</option>
+				<option value="4">4列</option>
+				<option value="5">5列</option>
+				<option value="6">6列</option>
+			</select>
+		</div>
+		<div class="form-item">
+			<label for="">图片宽高比例：</label>
+			<select name="" id="picScale">
+				<option value="10/16">16:10</option>
+				<option value="9/16">16:9</option>
+				<option value="3/4">4:3</option>
+				<option value="1/3">3:1</option>
+				<option value="1/2">2:1</option>
+				<option value="1">1:1</option>
+			</select>
+		</div>
+		<div class="form-item">
+			<label for="">列表项间距：</label>
+			<input type="text" id="spacing" value="20" placeholder="请输入列表项间距">
+		</div>
+		<div class="form-item">
+			<label for="">列表项内间距：</label>
+			<input type="text" id="padding" value="0" placeholder="请输入列表项内间距">
+		</div>
+		<div class="form-item">
+			<label for="">容器总宽度：</label>
+			<input type="text" id="fullWidth" value="1000" placeholder="请输入容器总宽度：">
+		</div>
+	</form>
+	<div class="abstract">
+		<p>1.此图文列表拓展性较强，可根据实际开发要求进行调整</p>
+	</div>
+</div>
+<div class="container">
+	<!--预览-->
+	<div id="preview">
+		<ul class="m-list-pic clearfix" id="list">
+			<li>
+				<div class="inner clearfix">
+					<div class="head"><a href="#"><img class="pic" src="img/img.jpg"></a></div>
+					<div class="body">
+						<h3 class="title"><a href="#">新加坡-马来西亚4晚3日游</a></h3>
+						<div class="info">
+						新加坡珠宝专卖店（80分钟） 出售:钻石、宝石、玉器、银饰 新加坡药油百货专卖店(40分钟） 出售：药油、土产及其他纪念品 【印度风情之旅】 前往新加坡印度人聚居地—【小印度】，参观【印度庙】（约30分钟），感受当地印度人的生活。 前往马来西亚首都吉隆坡近郊海滨城市波德申（约5个小时/此段路程较长，团友可在车上休息），途中享用晚餐。
+						</div>
+					</div>
+					<div class="foot">
+						<a class="button" href="#">立即预定</a>
+						<p>同行价：<strong class="price">￥2990</strong></p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="inner clearfix">
+					<div class="head"><a href="#"><img class="pic" src="img/img.jpg"></a></div>
+					<div class="body">
+						<h3 class="title"><a href="#">新加坡-马来西亚4晚3日游</a></h3>
+						<div class="info">
+						新加坡珠宝专卖店（80分钟） 出售:钻石、宝石、玉器、银饰 新加坡药油百货专卖店(40分钟） 出售：药油、土产及其他纪念品 【印度风情之旅】 前往新加坡印度人聚居地—【小印度】，参观【印度庙】（约30分钟），感受当地印度人的生活。 前往马来西亚首都吉隆坡近郊海滨城市波德申（约5个小时/此段路程较长，团友可在车上休息），途中享用晚餐。
+						</div>
+					</div>
+					<div class="foot">
+						<a class="button" href="#">立即预定</a>
+						<p>同行价：<strong class="price">￥2990</strong></p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="inner clearfix">
+					<div class="head"><a href="#"><img class="pic" src="img/img.jpg"></a></div>
+					<div class="body">
+						<h3 class="title"><a href="#">新加坡-马来西亚4晚3日游</a></h3>
+						<div class="info">
+						新加坡珠宝专卖店（80分钟） 出售:钻石、宝石、玉器、银饰 新加坡药油百货专卖店(40分钟） 出售：药油、土产及其他纪念品 【印度风情之旅】 前往新加坡印度人聚居地—【小印度】，参观【印度庙】（约30分钟），感受当地印度人的生活。 前往马来西亚首都吉隆坡近郊海滨城市波德申（约5个小时/此段路程较长，团友可在车上休息），途中享用晚餐。
+						</div>
+					</div>
+					<div class="foot">
+						<a class="button" href="#">立即预定</a>
+						<p>同行价：<strong class="price">￥2990</strong></p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="inner clearfix">
+					<div class="head"><a href="#"><img class="pic" src="img/img.jpg"></a></div>
+					<div class="body">
+						<h3 class="title"><a href="#">新加坡-马来西亚4晚3日游</a></h3>
+						<div class="info">
+						新加坡珠宝专卖店（80分钟） 出售:钻石、宝石、玉器、银饰 新加坡药油百货专卖店(40分钟） 出售：药油、土产及其他纪念品 【印度风情之旅】 前往新加坡印度人聚居地—【小印度】，参观【印度庙】（约30分钟），感受当地印度人的生活。 前往马来西亚首都吉隆坡近郊海滨城市波德申（约5个小时/此段路程较长，团友可在车上休息），途中享用晚餐。
+						</div>
+					</div>
+					<div class="foot">
+						<a class="button" href="#">立即预定</a>
+						<p>同行价：<strong class="price">￥2990</strong></p>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!--/预览-->
+
+	<!--html document-->
+	<div id="html" class="hide">
+		<textarea cols="100" rows="25" class="doc-code">
+<ul class="m-list-pic clearfix" id="list">
+	<li>
+		<div class="inner clearfix">
+			<div class="head"><a href="#"><img class="pic" src="img/img.jpg"></a></div>
+			<div class="body">
+				<h3 class="title"><a href="#">新加坡-马来西亚4晚3日游</a></h3>
+				<div class="info">
+				新加坡珠宝专卖店（80分钟） 出售:钻石、宝石、玉器、银饰 新加坡药油百货专卖店(40分钟） 出售：药油、土产及其他纪念品 【印度风情之旅】 前往新加坡印度人聚居地—【小印度】，参观【印度庙】（约30分钟），感受当地印度人的生活。 前往马来西亚首都吉隆坡近郊海滨城市波德申（约5个小时/此段路程较长，团友可在车上休息），途中享用晚餐。
+				</div>
+			</div>
+			<div class="foot">
+				<a class="button" href="#">立即预定</a>
+				<p>同行价：<strong class="price">￥2990</strong></p>
+			</div>
+		</div>
+	</li>
+</ul>
+		</textarea>	
+	</div>
+	<!--/html document-->
+
+	<!--css document-->
+	<div id="css" class="hide">
+		<textarea cols="100" rows="25" class="doc-code">
+.m-list-pic{ width: 1020px; margin:-10px; }
+.m-list-pic li{ float: left; width: 320px; padding: 10px;}
+.m-list-pic li .inner{ width: 320px; background-color: #fff; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);}
+.m-list-pic li .inner .head,
+.m-list-pic li .inner .head a{ display: block; width: 100%;}
+.m-list-pic li .inner .head .pic{ display: block; width: 100%; height: 200px;}
+.m-list-pic li .inner .body{ background-color: #fff;}
+.m-list-pic li .inner .body .title{ height:24px; line-height: 24px; padding:6px 10px; border-bottom:1px dotted #eee;font-size: 16px;font-weight: normal;}
+.m-list-pic li .inner .body .title a{ color: #666; text-decoration: none;}
+.m-list-pic li .inner .body .title a:hover{ color: #f60;}
+.m-list-pic li .inner .body .info{height: 66px; padding: 5px 10px; line-height: 22px; font-size: 12px; color: #999; overflow: hidden; }
+.m-list-pic li .inner .foot{ height: 28px; line-height: 28px; padding:6px 10px; border-top:1px solid #eee; background-color: #f8f8f8; font-size: 14px; color: #666; }
+.m-list-pic li .inner .foot .button{ float: right; width: 80px; height: 28px; line-height: 28px;border-radius: 3px; background-color: #61A62F; font-size: 14px; color: #fff; text-align: center; text-decoration: none; }
+.m-list-pic li .inner .foot .price{ color: #f90; font-size: 16px;}
+
+.m-list-pic li.full{ float: none; margin-bottom: 10px;}
+.m-list-pic li.full .inner{ height: 300px; }
+.m-list-pic li.full .inner .head{float: left; width: 480px; }
+.m-list-pic li.full .inner .head .pic{ width: 480px; height: 300px !important;}
+.m-list-pic li.full .inner .body,
+.m-list-pic li.full .inner .foot{ margin-left: 500px;}
+		</textarea>		
+	</div>
+	<!--/css document-->
+
+	<!--js document-->
+	<div id="js" class="hide">
+		<textarea cols="100" rows="25" class="doc-code">
+		</textarea>	
+	</div>
+	<!--/js document-->
+</div>
+
+
+<script src="/static/lib/jquery-1.8.3.min.js"></script>
+<script src="/js/iframe.js"></script>
+<script>
+$(function(){	
+	var column = $('#column'),
+		picScale =  $('#picScale'),
+		spacing = $('#spacing'),
+		padding = $('#padding'),
+		fullWidth = $('#fullWidth');
+
+	column.change(function(){
+		if(Number(column.val())===1){
+			$('#list>li').addClass('full');
+		}else{
+			$('#list>li').removeClass('full');
+		}
+		listGrid(fullWidth.val(),column.val(),spacing.val(),toFloat(picScale.val()),padding.val());
+	});
+
+	picScale.change(function(){
+		listGrid(fullWidth.val(),column.val(),spacing.val(),toFloat(picScale.val()),padding.val());
+	});
+
+	spacing.keyup(function(){
+		listGrid(fullWidth.val(),column.val(),spacing.val(),toFloat(picScale.val()),padding.val());
+	});
+
+	padding.keyup(function(){
+		listGrid(fullWidth.val(),column.val(),spacing.val(),toFloat(picScale.val()),padding.val());
+	});
+
+	fullWidth.keyup(function(){
+		listGrid(fullWidth.val(),column.val(),spacing.val(),picScale.val(),padding.val());
+	});
+});
+
+/*
+ * param 参数
+ * fullWidth: 列表容器总宽度
+ * column: 列表列数
+ * spacing: 列表项间距
+ * picScale: 图片比例
+ * pdding: 列表项内边距
+ */
+function listGrid(fullWidth,column,spacing,picScale,pdding){
+	var grid = $('#list'),
+		item = grid.find('li'),
+		inner = item.find('.inner'),
+		picture = inner.find('img'),
+		itemWidth = (fullWidth-spacing*(column-1))/column;
+
+//如果列表容器宽度等于列表项宽度
+	if(fullWidth===itemWidth)
+	{
+		item.addClass('item-full');
+		picture.height(((itemWidth-pdding)/2)*picScale);
+
+	}else{
+		item.removeClass('item-full');
+		picture.height(itemWidth*picScale-pdding*2);
+	}
+	grid.css({
+		'width':Number(fullWidth)+Number(spacing),
+		'margin':-spacing/2
+	});
+	item.css({
+		'width':itemWidth,
+		'padding':spacing/2+'px'
+	});
+	inner.css({
+		'width':itemWidth-2*pdding,
+		'padding':pdding
+	});
+
+}
+
+//分数转为浮点数
+function  toFloat(str){
+	if(Number(str)===1)
+	{
+		return Number(str);
+	}else{
+		var arr = str.split('/');
+		return Number(arr[0])/Number(arr[1]);
+	}
+}
+</script>
+</body>
+</html>

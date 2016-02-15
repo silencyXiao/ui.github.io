@@ -1,0 +1,344 @@
+@charset "utf-8";
+/* FAQ style document */
+body{
+	background-color: #F7F6F2;
+}
+
+/* 
+ * header 
+*/
+.header{
+	position:relative;
+	z-index:100;
+	min-width: 1000px;
+	height: 40px;
+	padding:10px 0;
+	border-bottom: 1px solid #ddd;
+	background-color: #fff;
+	box-shadow: 0 1px 5px rgba(0,0,0,.1);
+}
+.header .inner-full{
+	width: 100%;
+	min-width: 1000px;
+}
+.header .logo{
+	float: left;
+	width: 175px;
+	height: 40px;
+	padding-left: 20px;
+	margin-right: 20px;
+}
+.header .main-nav{
+	float: left;
+	width: 430px;
+	height:40px;
+	line-height: 40px;
+}
+.header .main-nav a{
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: 16px;
+	color: #999;
+}
+.header .main-nav a.active{
+	color: #000;
+}
+
+
+/* search form */
+.search-form{
+	position: relative;
+	z-index: 10;
+	float: right;
+	width: 322px;
+	height: 32px;
+	margin-right: 30px;
+	margin-top:4px; 
+}
+.search-form .input-search{
+	float: right;
+	width: 160px;
+	height: 20px;
+	line-height: 20px;
+	padding:5px 40px 5px 20px;
+	border:1px solid #ccc;
+	border-radius: 24px;
+	background-color:#f5f5f5;
+	font-size:12px; 
+	font-family: "Microsoft Yahei";
+	-ms-transition:all linear .3s;
+	-moz-transition:all linear .3s;
+	-webkit-transition:all linear .3s;
+	transition:all linear .3s;
+	color: #666;
+	font-size:14px;
+
+}
+.search-form .input-search:focus{
+	width: 260px;
+	border-color: #999;
+	background-color: #fff;
+	color: #666;
+}
+.search-form .btn-search{
+	position:absolute;
+	right: 0;
+	top: 0;
+	z-index: 11;
+	width: 32px;
+	height: 32px;
+	border: 0;
+	background: url("../img/search.png") no-repeat center center;
+	cursor: pointer;
+}
+
+/* aside */
+.aside-left{ 
+	position:relative;
+	z-index:10;
+	float:left;
+	width:300px; 
+}
+.aside-nav{
+	float: left;
+	width: 60px;
+	height: 100%;
+	background-color: #333;
+}
+.aside-nav li{
+	position:relative;
+	z-index:16;
+	width:60px;
+	height:60px;
+}
+.aside-nav li a{
+	display:block;
+	width:60px;
+	height:44px;
+	padding:8px 0;
+	font-size:12px;
+	color: #ddd;
+	text-align:center;
+}
+.aside-nav li a .icon24{
+	display: block;
+	margin-left: auto;
+	margin-right:auto;
+}
+.aside-nav li a span{
+	display:block;
+	height:20px;
+	line-height:20px;
+}
+.aside-nav li a:hover{
+	background-color:#464646;
+	color:#FFF;
+}
+.aside-nav li.active{
+	background-color:#F90;
+}
+.aside-nav li.active a,.main-nav li.active a:hover{
+	background-color:#5B5B5B;
+	color:#FFF;
+}
+
+.sub-nav-wrapper{
+	float: left;
+	width: 239px;
+	padding-top:10px;		
+	border-right: 1px solid #ccc;
+	background-color: #F7F6F2;
+	overflow-y:auto; 
+}
+.aside-sub-nav{ display:none;}
+.aside-sub-nav .aside-sub-nav-item{
+	
+}
+.aside-sub-nav .aside-sub-nav-item .aside-sub-nav-link{
+	position: relative;
+	display: block;
+	height: 36px;
+	line-height: 36px;
+	padding-left:40px;
+	padding-right: 20px;
+	color: #666;
+	font-size: 14px;
+}
+.aside-sub-nav .aside-sub-nav-item .aside-sub-nav-link .arrow{
+	position: absolute;
+	left:22px;
+	top:50%;
+	z-index: 11;
+	width: 12px;
+	height:12px;
+	margin-top: -6px;
+	background-image:url('../img/icon_fold.png');
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	font-size: 0;
+	vertical-align: middle;	
+}
+.aside-sub-nav .open .aside-sub-nav-link .arrow{
+	background-position: 0 -12px;
+}
+.aside-sub-nav .aside-sub-nav-item .aside-sub-nav-link:hover{
+	background-color: #F1F0EC;
+	color: #404040;
+}
+.aside-sub-nav .active .aside-sub-nav-link,
+.aside-sub-nav .active .aside-sub-nav-link:hover{
+	background-color: #E2E1DE;
+	color: #333;
+}
+.aside-sub-nav ul{
+	display: none;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #ccc;
+}
+.aside-sub-nav ul li{
+	height: 30px;
+	line-height: 30px;
+	margin-top: 3px;
+	font-size: 13px;
+}
+.aside-sub-nav ul li a{
+	position: relative;	
+	z-index: 10;
+	display: block;
+	height: 30px;
+	padding-left: 55px;
+	padding-right: 10px;
+}
+.aside-sub-nav ul li a:hover{
+	display: block;
+	background-color: #F1F0EC;
+	color: #404040;
+}
+.aside-sub-nav ul .active a,
+.aside-sub-nav ul .active a:hover{
+	display: block;
+	background-color: #F1F0EC;
+	color: #000;
+}
+
+/* content */
+.content{
+	margin-left:300px;
+}
+
+
+/* toolbar */
+.toolbar{
+	position:fixed;
+	right:20px;
+	bottom:20px;
+	z-index:100;
+	width:48px;
+}
+.toolbar ul li{
+	width:48px;
+	height:48px;
+	border-radius:5px;
+	background-color:#333;
+	background-color:rgba(0,0,0,.8);
+	cursor:pointer;
+	margin-top:5px;
+}
+.toolbar ul li.totop{ visibility:-hidden;}
+.toolbar ul li:hover{
+	background-color:rgba(0,0,0,.7);
+}
+.toolbar ul li .text{
+	display:none;
+	padding:8px 10px;
+	line-height:16px;
+	text-align:center;
+	letter-spacing:2px;
+	color:#fff;
+}
+.toolbar ul li .icon-totop{
+	width:48px;
+	height:48px;
+	background:url(../img/icon_totop.png) no-repeat center center;
+}
+.toolbar ul li .icon-service{
+	width:48px;
+	height:48px;
+	background:url(../img/icon_service.png) no-repeat center center;	
+}
+.toolbar ul li:hover .text{ display:block;}
+.toolbar ul li:hover .icon-totop,
+.toolbar ul li:hover .icon-service{ display:none;}
+
+
+
+/* icon */
+.icon-doc{
+	position: absolute;
+	left:40px;
+	top:50%;
+	z-index: 11;
+	width: 12px;
+	height: 14px;
+	margin-top:-7px;
+	background-image: url('../img/icon_doc.png');
+	background-repeat: no-repeat;
+	background-position: 0 0;	
+}
+.icon16{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-right: 3px;
+	background-image: url('../img/icon_time2.png');
+	background-repeat: no-repeat;
+	vertical-align: text-bottom;
+}
+.icon-clock{	
+	background-position: 0 0;
+}
+.icon-eye{
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	margin-right: 3px;
+	background-image: url('../img/icon_eye.png');
+	background-repeat: no-repeat;
+	background-position:0 0;
+	vertical-align: text-bottom;
+}
+.icon-like{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-right: 3px;
+	background-image: url('../img/icon_like.png');
+	background-repeat: no-repeat;
+	background-position:0 0;
+	vertical-align: text-bottom;
+}
+.like{
+	cursor:pointer;
+}
+.like:hover{
+	color:#f60;
+}
+.like:hover .icon-like{
+	background-position:0 -16px;
+}
+
+.icon24{
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background-image: url('../img/icon24.png');
+	background-repeat: no-repeat;
+}
+.icon24-layout{ background-position: 0 0;}
+.icon24-module{ background-position: 0 -24px;}
+.icon24-unit{ background-position: 0 -48px;}
+
+
+.red{ color:#CF0F31;}
+.gray9{ color:#999;}
+

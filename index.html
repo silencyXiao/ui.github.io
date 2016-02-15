@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>ttx_UI手册</title>
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/static/style/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- header start-->
+<div class="header" id="header">
+    <div class="inner">
+        <a href="default.html" class="logo"><img src="img/faq_logo.png" alt="小强ERP系统_帮助中心"></a>
+        <div class="main-nav">
+            <a class="active" href="#">PC</a>
+            <a href="#">Mobile</a>
+            <a href="#">CSS规范</a>
+            <a href="#">HTML规范</a>
+            <a href="#">JS规范</a>
+        </div>
+        <form action="#" class="search-form">
+            <input type="text" class="input-search" placeholder="请输入关键字">
+            <button class="btn-search"></button>
+        </form>
+    </div>
+</div>
+<!-- header end-->
+
+<!-- container start-->
+<div class="container">
+	
+	<!-- aside start-->
+	<div class="aside-left" id="asideLeft">
+		<ul class="aside-nav">
+            <li class="active"><a href="javascript:void(0);">
+                <i class="icon24 icon24-layout"></i>
+                <span>布局</span>
+            </a></li>
+            <li> <a href="javascript:void(0);">
+                <i class="icon24 icon24-module"></i>
+                <span>模块</span>
+            </a></li>
+            <li><a href="javascript:void(0);">
+                <i class="icon24 icon24-unit"></i>
+                <span>元件</span>
+            </a></li>
+        </ul>
+        <div class="sub-nav-wrapper">
+            <!--布局 start-->
+            <ul class="aside-sub-nav" style="display:block;">  
+                <li class="aside-sub-nav-item active">
+                    <a class="aside-sub-nav-link" target="iframeContainer" href="sample/layout/layout.html">开发须知</a>
+                </li>  
+                <li class="aside-sub-nav-item">
+                    <a class="aside-sub-nav-link" target="iframeContainer" href="sample/layout/header.html">头部 header</a>
+                </li>
+                <li class="aside-sub-nav-item">
+                    <a class="aside-sub-nav-link" href="javascript:void(0)">导航 navbar</a>
+                </li>
+                <li class="aside-sub-nav-item">
+                    <a class="aside-sub-nav-link" href="javascript:void(0)">标语 slogan</a>
+                </li>
+                <li class="aside-sub-nav-item">
+                    <a class="aside-sub-nav-link" href="javascript:void(0)">面包屑 crumb</a>
+                </li>
+                <li class="aside-sub-nav-item">
+                    <a class="aside-sub-nav-link" href="javascript:void(0)">底部 footer</a>
+                </li>
+            </ul>
+            <!--布局 end-->
+        	<!--模块 start-->
+            <ul class="aside-sub-nav" style="display:none;">  
+                <li class="aside-sub-nav-item" data-child="true">
+                    <a class="aside-sub-nav-link" href="javascript:void(0)">列表 list</a>
+                    <ul>
+                        <li><a target="iframeContainer" href="sample/module/list_pic.html"><i class="icon-doc"></i>图文列表 list-pic</a></li>	
+                        <li><a href="#"><i class="icon-doc"></i>文字列表 list-text</a></li>
+                    </ul>
+                </li>
+                <li class="aside-sub-nav-item" data-child="true">
+                    <a class="aside-sub-nav-link" href="javascript:void(0)">幻灯片 slide</a>
+                    <ul>
+                        <li><a href="#"><i class="icon-doc"></i>全屏幻灯片 slide-full</a></li>   
+                        <li><a href="#"><i class="icon-doc"></i>图片幻灯片 slide-pic</a></li>
+                        <li><a href="#"><i class="icon-doc"></i>文字幻灯片 slide-text</a></li>
+                    </ul>
+                </li>  
+                <li class="aside-sub-nav-item" data-child="true">
+                    <a class="aside-sub-nav-link" href="javascript:void(0)">选项卡 tab</a>
+                    <ul>
+                        <li><a href="#"><i class="icon-doc"></i>纵向选项卡 tab-vertical</a></li>   
+                    </ul>
+                </li>
+                <li class="aside-sub-nav-item" data-child="true">
+                    <a class="aside-sub-nav-link" href="javascript:void(0)">工具栏 toolbar</a>
+                    <ul>
+                        <li><a href="#"><i class="icon-doc"></i>侧工具栏 toolbar-aside</a></li>   
+                    </ul>
+                </li>
+                <li class="aside-sub-nav-item">
+                    <a class="aside-sub-nav-link" href="javascript:void(0)">表格 table</a>
+                </li>
+                <li class="aside-sub-nav-item">
+                    <a class="aside-sub-nav-link" href="javascript:void(0)">分页 pagination</a>
+                </li>
+                <li class="aside-sub-nav-item">
+                    <a class="aside-sub-nav-link" href="javascript:void(0)">评论模块 comment</a>
+                </li>
+                <li class="aside-sub-nav-item">
+                    <a class="aside-sub-nav-link" href="javascript:void(0)">滚动选项卡 scroll-listen</a>
+                </li>
+                <li class="aside-sub-nav-item">
+                    <a class="aside-sub-nav-link" href="javascript:void(0)">条件组 condition</a>
+                </li>
+                <li class="aside-sub-nav-item">
+                    <a class="aside-sub-nav-link" href="javascript:void(0)">线路摘要 abstract</a>
+                </li>
+                <li class="aside-sub-nav-item">
+                    <a class="aside-sub-nav-link" href="javascript:void(0)">时间模块 dayline</a>
+                </li>
+                <li class="aside-sub-nav-item">
+                    <a class="aside-sub-nav-link" href="javascript:void(0)">进度状态条 stepbar</a>
+                </li>
+                
+                <li class="aside-sub-nav-item">
+                    <a class="aside-sub-nav-link" href="javascript:void(0)">文章详情 article-info</a>
+                </li>
+                <li class="aside-sub-nav-item">
+                    <a class="aside-sub-nav-link" href="javascript:void(0)">公告通知 notice</a>
+                </li>
+                <li class="aside-sub-nav-item">
+                    <a class="aside-sub-nav-link" href="javascript:void(0)">主题活动 topic</a>
+                </li>
+            </ul>
+            <!--模块 end-->
+            <!--元件 start-->
+            <ul class="aside-sub-nav" style="display:none;">  
+                <li class="aside-sub-nav-item">
+                    <a class="aside-sub-nav-link" target="iframeContainer" href="sample/unit/form.html">表单 form</a>
+                </li>
+                <li class="aside-sub-nav-item">
+                    <a class="aside-sub-nav-link" href="javascript:void(0)">按钮 btn</a>
+                </li>
+                <li class="aside-sub-nav-item">
+                    <a class="aside-sub-nav-link" href="javascript:void(0)">图标 icon</a>
+                </li>
+                <li class="aside-sub-nav-item">
+                    <a class="aside-sub-nav-link" href="javascript:void(0)">标题 title</a>
+                </li>
+            </ul>
+            <!--元件 start-->
+        </div>
+    </div>    
+	<!-- aside end-->	
+    
+    <!-- content start-->
+    <div class="content">
+    	<iframe id="iframeContainer" name="iframeContainer" frameborder="0"  scrolling="yes" src="sample/layout/layout.html" width="100%"></iframe>
+    </div>
+    <!-- content end-->
+</div>
+<!-- container end-->
+<script type="text/javascript" src="static/lib/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/basic.js"></script>
+</body>
+</html>
