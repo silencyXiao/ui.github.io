@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>网站布局</title>
+<link href="/static/style/reset.css" rel="stylesheet">
+<link href="/css/iframe.css" rel="stylesheet">
+</head> 
+<body class="pd20">
+<div class="doc-intro">
+	<h1 class="tt">开发须知</h1>
+	<p>1. 开发规范大部分参考<a class="link" href="http://nec.netease.com" target="_blank">网易NEC</a>规范标准，少部分为公司内部人员自己整理 <a class="link" href="/static/style/reset.css" target="_blank">reset.css</a></p>
+	<p>2. 不提供对IE6、IE7的支持，浏览器兼容性均为IE8+以上；</p>
+	<p>3. 提供的案例和结构主要针对同天下小强前台模板；</p>
+	<p>4. 统一语义化理解和命名，统一使用简写能减少css的文件大小</p>
+	<p>5. 一套好的规范约束，能大大提升团队在合作时的工作效率，请严格按照以下规范编写代码，或许你有更好的建议，欢迎大家一起讨论，为我们的规范舔砖加瓦；</p>
+</div>
+<div class="grid clearfix">
+	<div class="grid-sizer"></div>
+	<div class="col-4">
+		<h3>布局 layout</h3>
+		<table class="table" cellpadding="0" cellspacing="0" width="320">
+			<thead>
+				<th width="60">语义</th>
+				<th>命名</th>
+				<th>简写</th>
+				<th>事例</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>文档</td>
+					<td>document</td>
+					<td>doc</td>
+					<td>doc</td>
+				</tr>
+				<tr>
+					<td>头部</td>
+					<td>header</td>
+					<td>header</td>
+					<td>header</td>
+				</tr>
+				<tr>
+					<td>身体</td>
+					<td>body</td>
+					<td>body</td>
+					<td>body</td>
+				</tr>
+				<tr>
+					<td>底部</td>
+					<td>footer</td>
+					<td>footer</td>
+					<td>footer</td>
+				</tr>
+				<tr>
+					<td>内容容器</td>
+					<td>container</td>
+					<td>ctn</td>
+					<td>ctn</td>
+				</tr>
+				<tr>
+					<td>内容</td>
+					<td>content</td>
+					<td>ct</td>
+					<td>ct</td>
+				</tr>
+				<tr>
+					<td>主体</td>
+					<td>main</td>
+					<td>mn</td>
+					<td>mn</td>
+				</tr>
+				<tr>
+					<td>侧栏</td>
+					<td>side</td>
+					<td>sd</td>
+					<td>sd</td>
+				</tr>
+			</tbody>		
+		</table>
+	</div>
+	<div class="col-4">
+		<h3>包裹 wrapper</h3>
+		<table class="table" cellpadding="0" cellspacing="0" width="320">
+			<thead>
+				<th width="60">语义</th>
+				<th>命名</th>
+				<th>简写</th>
+				<th>事例</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>外层容器</td>
+					<td>wrap</td>
+					<td>wrap</td>
+					<td>wrap</td>
+				</tr>
+				<tr>
+					<td>盒内容器</td>
+					<td>inner</td>
+					<td>in</td>
+					<td>in</td>
+				</tr>
+			</tbody>		
+		</table>
+	</div>
+	<div class="col-4">
+		<h3>区块 block</h3>
+		<table class="table" cellpadding="0" cellspacing="0" width="320">
+			<thead>
+				<th width="60">语义</th>
+				<th>命名</th>
+				<th>简写</th>
+				<th>事例</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>部分</td>
+					<td>section</td>
+					<td>sec</td>
+					<td>sec</td>
+				</tr>
+				<tr>
+					<td>区域</td>
+					<td>region</td>
+					<td>rgn</td>
+					<td>rgn</td>
+				</tr>
+				<tr>
+					<td>区域</td>
+					<td>area</td>
+					<td>area</td>
+					<td>area</td>
+				</tr>
+				<tr>
+					<td>盒子</td>
+					<td>box</td>
+					<td>box</td>
+					<td>box</td>
+				</tr>
+			</tbody>		
+		</table>
+	</div>
+	<div class="col-4">
+		<h3>结构 structure</h3>
+		<table class="table" cellpadding="0" cellspacing="0" width="320">
+			<thead>
+				<th width="60">语义</th>
+				<th>命名</th>
+				<th>简写</th>
+				<th>事例</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>头部</td>
+					<td>head</td>
+					<td>head/hd</td>
+					<td>head/hd</td>
+				</tr>
+				<tr>
+					<td>主体</td>
+					<td>body</td>
+					<td>body/bd</td>
+					<td>body/bd</td>
+				</tr>
+				<tr>
+					<td>底部</td>
+					<td>foot</td>
+					<td>foot/ft</td>
+					<td>foot/ft</td>
+				</tr>
+				<tr>
+					<td>左边</td>
+					<td>left</td>
+					<td>l</td>
+					<td>box-l</td>
+				</tr>
+				<tr>
+					<td>右边</td>
+					<td>right</td>
+					<td>r</td>
+					<td>box-r</td>
+				</tr>
+				<tr>
+					<td>上边</td>
+					<td>top</td>
+					<td>t</td>
+					<td>box-t</td>
+				</tr>
+				<tr>
+					<td>下边</td>
+					<td>bottom</td>
+					<td>b</td>
+					<td>box-b</td>
+				</tr>
+				<tr>
+					<td>水平中间</td>
+					<td>center</td>
+					<td>c</td>
+					<td>box-c</td>
+				</tr>
+				<tr>
+					<td>垂直居中</td>
+					<td>middle</td>
+					<td>m</td>
+					<td>box-m</td>
+				</tr>
+				<tr>
+					<td>网格</td>
+					<td>grid</td>
+					<td>grid</td>
+					<td>grid</td>
+				</tr>
+				<tr>
+					<td>细胞</td>
+					<td>cell</td>
+					<td>cell</td>
+					<td>cell</td>
+				</tr>
+				<tr>
+					<td>行(横向)</td>
+					<td>row</td>
+					<td>row</td>
+					<td>row</td>
+				</tr>
+				<tr>
+					<td>纵列</td>
+					<td>column</td>
+					<td>col</td>
+					<td>col-6</td>
+				</tr>
+				<tr>
+					<td>跨度</td>
+					<td>span</td>
+					<td>span</td>
+					<td>span-6</td>
+				</tr>
+			</tbody>		
+		</table>
+	</div>
+	<div class="col-4">
+		<h3>主次 primary and secondary</h3>
+		<table class="table" cellpadding="0" cellspacing="0" width="320">
+			<thead>
+				<th width="60">语义</th>
+				<th>命名</th>
+				<th>简写</th>
+				<th>事例</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>子</td>
+					<td>sub</td>
+					<td>sub</td>
+					<td>snav</td>
+				</tr>
+				<tr>
+					<td>子层</td>
+					<td>child</td>
+					<td>c</td>
+					<td>boxc</td>
+				</tr>
+				<tr>
+					<td>主要的</td>
+					<td>primary</td>
+					<td>prm</td>
+					<td>prm</td>
+				</tr>
+				<tr>
+					<td>次要的</td>
+					<td>secondary</td>
+					<td>scd</td>
+					<td>scd</td>
+				</tr>
+				<tr>
+					<td>主要的</td>
+					<td>major</td>
+					<td>maj</td>
+					<td>maj</td>
+				</tr>
+				<tr>
+					<td>次要的</td>
+					<td>minor</td>
+					<td>min</td>
+					<td>min</td>
+				</tr>
+			</tbody>		
+		</table>
+	</div>
+	<div class="col-4">
+		<h3>大小 size</h3>
+		<table class="table" cellpadding="0" cellspacing="0" width="320">
+			<thead>
+				<th width="60">语义</th>
+				<th>命名</th>
+				<th>简写</th>
+				<th>事例</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>大</td>
+					<td>large</td>
+					<td>lg</td>
+					<td>btn-lg</td>
+				</tr>
+				<tr>
+					<td>中</td>
+					<td>middle</td>
+					<td>md</td>
+					<td>btn-md</td>
+				</tr>
+				<tr>
+					<td>小</td>
+					<td>small</td>
+					<td>sm</td>
+					<td>btn-sm</td>
+				</tr>
+				<tr>
+					<td>迷你</td>
+					<td>mn</td>
+					<td>mn</td>
+					<td>btn-mn</td>
+				</tr>
+			</tbody>		
+		</table>
+	</div>
+	<div class="col-4">
+		<h3>等分 part</h3>
+		<table class="table" cellpadding="0" cellspacing="0" width="320">
+			<thead>
+				<th width="60">语义</th>
+				<th>命名</th>
+				<th>简写</th>
+				<th>事例</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>满屏</td>
+					<td>full</td>
+					<td>full</td>
+					<td>box-full</td>
+				</tr>
+				<tr>
+					<td>一半</td>
+					<td>half</td>
+					<td>half</td>
+					<td>box-half</td>
+				</tr>
+				<tr>
+					<td>三分之一</td>
+					<td>third</td>
+					<td>third</td>
+					<td>box-thd</td>
+				</tr>
+				<tr>
+					<td>四分之一</td>
+					<td>quarter</td>
+					<td>qut</td>
+					<td>box-qut</td>
+				</tr>
+			</tbody>		
+		</table>
+	</div>
+
+	<div class="col-4">
+		<h3>交互模块 interaction</h3>
+		<table class="table" cellpadding="0" cellspacing="0" width="320">
+			<thead>
+				<th width="60">语义</th>
+				<th>命名</th>
+				<th>简写</th>
+				<th>事例</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>幻灯片</td>
+					<td>slide</td>
+					<td>sld</td>
+					<td>sld</td>
+				</tr>
+				<tr>
+					<td>面板</td>
+					<td>panel</td>
+					<td>panel</td>
+					<td>panel</td>
+				</tr>
+				<tr>
+					<td>选项卡</td>
+					<td>tab</td>
+					<td>tab</td>
+					<td>tab</td>
+				</tr>
+				<tr>
+					<td>对话框</td>
+					<td>dialog</td>
+					<td>dialog</td>
+					<td>dialog</td>
+				</tr>
+				<tr>
+					<td>分页</td>
+					<td>pagination</td>
+					<td>pgn</td>
+					<td>pgn</td>
+				</tr>
+				<tr>
+					<td>警告弹层</td>
+					<td>alert</td>
+					<td>alert</td>
+					<td>alert</td>
+				</tr>
+				<tr>
+					<td>旋转木马</td>
+					<td>carrousel</td>
+					<td>crsl</td>
+					<td>crsl</td>
+				</tr>
+				<tr>
+					<td>手风琴</td>
+					<td>accordion</td>
+					<td>acc</td>
+					<td>acc</td>
+				</tr>
+				<tr>
+					<td>提示信息</td>
+					<td>tips</td>
+					<td>tips</td>
+					<td>tips</td>
+				</tr>
+				<tr>
+					<td>滚动</td>
+					<td>scroll</td>
+					<td>scrl</td>
+					<td>scrl</td>
+				</tr>
+				<tr>
+					<td>无缝滚动</td>
+					<td>marquee</td>
+					<td>mrq</td>
+					<td>mrq</td>
+				</tr>
+				<tr>
+					<td>开关</td>
+					<td>switch</td>
+					<td>swh</td>
+					<td>swh</td>
+				</tr>
+				<tr>
+					<td>步骤栏</td>
+					<td>stepbar</td>
+					<td>stpb</td>
+					<td>stpb</td>
+				</tr>
+			</tbody>		
+		</table>
+	</div>
+
+	<div class="col-4">	
+		<h3>模块 module</h3>
+		<table class="table" cellpadding="0" cellspacing="0" width="320">
+			<thead>
+				<th width="60">语义</th>
+				<th>命名</th>
+				<th>简写</th>
+				<th>事例</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>导航条</td>
+					<td>navbar </td>
+					<td>navbar</td>
+					<td>navbar</td>
+				</tr>
+				<tr>
+					<td>导航</td>
+					<td>nav</td>
+					<td>nav</td>
+					<td>nav</td>
+				</tr>
+				<tr>
+					<td>主导航</td>
+					<td>main nav</td>
+					<td>mnav</td>
+					<td>mnav</td>
+				</tr>
+				<tr>
+					<td>子导航</td>
+					<td>sub nav</td>
+					<td>snav</td>
+					<td>snav</td>
+				</tr>
+				<tr>
+					<td>菜单</td>
+					<td>menu</td>
+					<td>menu</td>
+					<td>menu</td>
+				</tr>
+				<tr>
+					<td>子菜单</td>
+					<td>sub menu</td>
+					<td>smenu</td>
+					<td>smenu</td>
+				</tr>
+				<tr>
+					<td>面包屑</td>
+					<td>crumb</td>
+					<td>crm</td>
+					<td>crm</td>
+				</tr>
+				<tr>
+					<td>列表</td>
+					<td>list</td>
+					<td>lst</td>
+					<td>lst</td>
+				</tr>
+				<tr>
+					<td>表格</td>
+					<td>table</td>
+					<td>tbl</td>
+					<td>tbl</td>
+				</tr>
+				<tr>
+					<td>顶部栏</td>
+					<td>topbar</td>
+					<td>tpb</td>
+					<td>tpb</td>
+				</tr>
+				<tr>
+					<td>工具栏</td>
+					<td>toolbar</td>
+					<td>tb</td>
+					<td>tb</td>
+				</tr>
+				<tr>
+					<td>组</td>
+					<td>group</td>
+					<td>grp</td>
+					<td>grp</td>
+				</tr>
+			</tbody>		
+		</table>
+	</div>
+	<div class="col-4">
+		<h3>单元 unit</h3>
+		<table class="table" cellpadding="0" cellspacing="0" width="320">
+			<thead>
+				<th width="60">语义</th>
+				<th>命名</th>
+				<th>简写</th>
+				<th>事例</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>项</td>
+					<td>item </td>
+					<td>itm</td>
+					<td>item</td>
+				</tr>
+				<tr>
+					<td>选项</td>
+					<td>option </td>
+					<td>optn</td>
+					<td>optn</td>
+				</tr>
+				<tr>
+					<td>图片</td>
+					<td>image </td>
+					<td>img</td>
+					<td>img</td>
+				</tr>
+				<tr>
+					<td>实体图片</td>
+					<td>picture </td>
+					<td>pic</td>
+					<td>pic</td>
+				</tr>
+				<tr>
+					<td>背景图片</td>
+					<td>background </td>
+					<td>bg</td>
+					<td>bg</td>
+				</tr>
+				<tr>
+					<td>图形</td>
+					<td>graphic</td>
+					<td>grc</td>
+					<td>grc</td>
+				</tr>
+				<tr>
+					<td>外标题</td>
+					<td>headline</td>
+					<td>hl</td>
+					<td>hl</td>
+				</tr>
+				<tr>
+					<td>内标题</td>
+					<td>title</td>
+					<td>tt</td>
+					<td>tt</td>
+				</tr>
+				<tr>
+					<td>按钮</td>
+					<td>button</td>
+					<td>btn</td>
+					<td>btn</td>
+				</tr>
+				<tr>
+					<td>输入框</td>
+					<td>input</td>
+					<td>ipt</td>
+					<td>ipt</td>
+				</tr>
+				<tr>
+					<td>链接</td>
+					<td>link</td>
+					<td>link</td>
+					<td>link</td>
+				</tr>
+				<tr>
+					<td>文本</td>
+					<td>text</td>
+					<td>txt</td>
+					<td>txt</td>
+				</tr>
+				<tr>
+					<td>数字</td>
+					<td>number</td>
+					<td>num</td>
+					<td>num</td>
+				</tr>
+				<tr>
+					<td>数字</td>
+					<td>number</td>
+					<td>num</td>
+					<td>num</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<div class="col-4">
+		<h3>语义化 other</h3>
+		<table class="table" cellpadding="0" cellspacing="0" width="320">
+			<thead>
+				<th width="60">语义</th>
+				<th>命名</th>
+				<th>简写</th>
+				<th>事例</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>标志</td>
+					<td>logo </td>
+					<td>logo</td>
+					<td>logo</td>
+				</tr>
+				<tr>
+					<td>店招</td>
+					<td>sign </td>
+					<td>sign</td>
+					<td>sign</td>
+				</tr>
+				<tr>
+					<td>标语</td>
+					<td>slogan </td>
+					<td>slg</td>
+					<td>slg</td>
+				</tr>
+				<tr>
+					<td>通知</td>
+					<td>notice</td>
+					<td>ntc</td>
+					<td>ntc</td>
+				</tr>
+				<tr>
+					<td>投票</td>
+					<td>vote</td>
+					<td>vote</td>
+					<td>vote</td>
+				</tr>
+				<tr>
+					<td>星级</td>
+					<td>star</td>
+					<td>star</td>
+					<td>star</td>
+				</tr>
+				<tr>
+					<td>评论</td>
+					<td>comment</td>
+					<td>cmt</td>
+					<td>cmt</td>
+				</tr>
+				<tr>
+					<td>论坛</td>
+					<td>forum</td>
+					<td>frm</td>
+					<td>frm</td>
+				</tr>
+				<tr>
+					<td>登录</td>
+					<td>login</td>
+					<td>log</td>
+					<td>log</td>
+				</tr>
+				<tr>
+					<td>注册</td>
+					<td>register</td>
+					<td>reg</td>
+					<td>reg</td>
+				</tr>
+				<tr>
+					<td>广告</td>
+					<td>advertise </td>
+					<td>ad</td>
+					<td>ad</td>
+				</tr>
+				<tr>
+					<td>搜索</td>
+					<td>search</td>
+					<td>sch</td>
+					<td>sch</td>
+				</tr>
+				<tr>
+					<td>热点</td>
+					<td>hot</td>
+					<td>hot</td>
+					<td>hot</td>
+				</tr>
+				<tr>
+					<td>帮助</td>
+					<td>help</td>
+					<td>help</td>
+					<td>help</td>
+				</tr>
+				<tr>
+					<td>排行</td>
+					<td>top</td>
+					<td>top</td>
+					<td>top</td>
+				</tr>
+				<tr>
+					<td>新闻</td>
+					<td>news</td>
+					<td>news</td>
+					<td>news</td>
+				</tr>
+				<tr>
+					<td>下载</td>
+					<td>download</td>
+					<td>dld</td>
+					<td>dld</td>
+				</tr>
+				<tr>
+					<td>版权</td>
+					<td>copyright</td>
+					<td>cprt</td>
+					<td>cprt</td>
+				</tr>
+				<tr>
+					<td>结果</td>
+					<td>result</td>
+					<td>rst</td>
+					<td>rst</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="col-4">
+		<h3>状态 status</h3>
+		<table class="table" cellpadding="0" cellspacing="0" width="320">
+			<thead>
+				<th width="60">语义</th>
+				<th>命名</th>
+				<th>简写</th>
+				<th>事例</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>悬停</td>
+					<td>hover</td>
+					<td>hov</td>
+					<td>hov</td>
+				</tr>
+				<tr>
+					<td>被点击</td>
+					<td>active</td>
+					<td>act</td>
+					<td>act</td>
+				</tr>
+				<tr>
+					<td>已访问</td>
+					<td>visited</td>
+					<td>vis</td>
+					<td>vis</td>
+				</tr>
+				<tr>
+					<td>当前</td>
+					<td>current</td>
+					<td>crt</td>
+					<td>crt</td>
+				</tr>
+				<tr>
+					<td>选中</td>
+					<td>selected</td>
+					<td>sel</td>
+					<td>sel</td>
+				</tr>
+				<tr>
+					<td>选中</td>
+					<td>checked</td>
+					<td>chk</td>
+					<td>chk</td>
+				</tr>
+				<tr>
+					<td>不可用</td>
+					<td>disabled</td>
+					<td>dis</td>
+					<td>dis</td>
+				</tr>
+				<tr>
+					<td>开</td>
+					<td>on</td>
+					<td>on</td>
+					<td>on</td>
+				</tr>
+				<tr>
+					<td>关</td>
+					<td>off</td>
+					<td>off</td>
+					<td>off</td>
+				</tr>
+				<tr>
+					<td>显示</td>
+					<td>show</td>
+					<td>show</td>
+					<td>show</td>
+				</tr>
+				<tr>
+					<td>隐藏</td>
+					<td>hide</td>
+					<td>hide</td>
+					<td>hide</td>
+				</tr>
+				<tr>
+					<td>打开</td>
+					<td>open</td>
+					<td>open</td>
+					<td>open</td>
+				</tr>
+				<tr>
+					<td>错误</td>
+					<td>error</td>
+					<td>err</td>
+					<td>err</td>
+				</tr>
+				<tr>
+					<td>警告</td>
+					<td>warn</td>
+					<td>warn</td>
+					<td>warn</td>
+				</tr>
+				<tr>
+					<td>成功</td>
+					<td>success</td>
+					<td>suc</td>
+					<td>suc</td>
+				</tr>
+				<tr>
+					<td>失败</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>fail</td>
+				</tr>
+			</tbody>		
+		</table>
+	</div>
+
+	<div class="col-4">
+		<h3>特殊符号 symbol</h3>
+		<table class="table" cellpadding="0" cellspacing="0" width="320">
+			<thead>
+				<th width="60">语义</th>
+				<th>命名</th>
+				<th>简写</th>
+				<th>事例</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>分隔</td>
+					<td>separation </td>
+					<td>sep</td>
+					<td>sep</td>
+				</tr>
+				<tr>
+					<td>标记</td>
+					<td>caret</td>
+					<td>caret</td>
+					<td>caret</td>
+				</tr>
+				<tr>
+					<td>三角</td>
+					<td>triangle</td>
+					<td>trgl</td>
+					<td>trgl</td>
+				</tr>
+				<tr>
+					<td>点符号</td>
+					<td>dot</td>
+					<td>dot</td>
+					<td>dot</td>
+				</tr>
+				<tr>
+					<td>前缀</td>
+					<td>prefix</td>
+					<td>pre</td>
+					<td>pre</td>
+				</tr>
+				<tr>
+					<td>后缀</td>
+					<td>suffix</td>
+					<td>suf</td>
+					<td>suf</td>
+				</tr>
+			</tbody>		
+		</table>
+	</div>
+</div>
+<script src="/static/lib/jquery-1.8.3.min.js"></script>
+<script src="/js/iframe.js"></script>
+<script src="/static/lib/masonry-docs.min.js"></script>
+<script>
+$(function(){
+     // init Masonry
+    var $grid = $('.grid').masonry({
+        itemSelector: '.col-4',
+        gutter:0,
+        columnWidth: '.grid-sizer'
+    }); 
+	
+});  
+</script>
+</body>
+</html>

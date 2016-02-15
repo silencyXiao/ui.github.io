@@ -1,34 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-	<meta charset="UTF-8">
-	<title>form表单</title>
-	<link href="/static/style/reset.css" rel="stylesheet">
-	<link href="css/form.css" rel="stylesheet">
-
+<meta charset="UTF-8">
+<title>form表单</title>
+<link href="/static/style/reset.css" rel="stylesheet">
+<link href="/css/iframe.css" rel="stylesheet">
+<link href="css/form.css" rel="stylesheet">
 <style>
-body{ background-color: #f1f1f1; font-family: 'Microsoft Yahei'; }
-input,textarea,select,button{
-    font-family: 'Microsoft Yahei';
-}
-.aside-left{ position: fixed; top: 0; left: 0; float: left; width: 200px; padding:20px; border-right:1px solid #ccc; background-color: #fff; }
-.form-filter{ margin-bottom: 20px; }
-.form-filter .form-item{ height: 30px; line-height: 30px; margin-bottom: 5px; }
-.form-filter .form-item label{ float: left; width: 7em; height: 30px; line-height: 30px; text-align: right; }
-.form-filter .form-item input{ width: 100px; height: 18px; padding:2px;
-}
-.tab{ height: 30px; padding-left: 10px; border-bottom: 1px solid #ccc; margin-bottom: 20px;}
-.tab li{ float: left; height: 30px; line-height: 30px; padding:0 10px; background-color: #fff; color: #999; font-size: 13px; cursor: pointer; }
-.tab li:hover{ color: #666; }
-.tab li.active{ position: relative; top: 0; border:1px solid #ccc; border-radius: 3px 3px 0 0; border-bottom: 0; color: #333; }
-
-.abstract{ padding:10px; border:1px solid #FBEED5;  border-radius: 3px; background-color: #FCF8E3; color: #c09853;}
-.abstract p{ margin-bottom: 5px; }
-
-.container{ margin-left: 240px; padding:20px;}
-.doc-tt{ padding:0 10px; height: 30px; line-height: 30px; }
-.code{ display: block; width: 95%; padding:10px; border:1px solid #e1e1e8; border-radius:5px; margin:0 10px; background-color: #f7f7f9; font-size: 13px; line-height: 20px; color: #333; font-family: 'Microsoft Yahei';}
-
 fieldset{
     padding:5px;
     border:2px solid #ccc;
@@ -99,7 +77,6 @@ fieldset>legend{
                             <span class="add">用户信息：</span>
                             <input type="text" class="input-text" placeholder="输入文本信息">
                         </div>
-                        <input type="text" class="input-text" placeholder="输入文本信息" >
                     </div>
                 </div>
                 <div class="form-row clearfix">
@@ -120,6 +97,10 @@ fieldset>legend{
                             <span class="add">KB</span>
                         </div>
                     </div>
+                </div>
+                <div class="form-row clearfix">
+                    <label class="form-column1">日期选择框：</label>
+                    <div class="form-column2"><input type="text" class="input-text laydate-icon" id="date" placeholder="选择日期" ></div>
                 </div>
                 <div class="form-row clearfix">
                     <label class="form-column1">单选按钮组：</label>
@@ -163,39 +144,42 @@ fieldset>legend{
     <!--html document-->
     <div id="html" class="hide">
         <p class="doc-tt">输入框</p>
-        <textarea rows="1" class="code"><input type="text" class="input-text" placeholder="输入文本信息" ></textarea> 
+        <textarea rows="1" class="doc-code"><input type="text" class="input-text" placeholder="输入文本信息" ></textarea> 
 
         <p class="doc-tt">文本框</p>
-        <textarea rows="1" class="code">&lt;textarea class="textarea" placeholder="输入文本区信息"&gt;&lt;/textarea&gt;</textarea> 
+        <textarea rows="1" class="doc-code">&lt;textarea class="textarea" placeholder="输入文本区信息"&gt;&lt;/textarea&gt;</textarea> 
 
         <p class="doc-tt">下拉框</p>
-        <textarea rows="5" class="code"><select class="select">
+        <textarea rows="5" class="doc-code"><select class="select">
     <option>请选择</option>
     <option>深圳</option>
     <option>广州</option>
 </select></textarea>
 
         <p class="doc-tt">带前缀输入框</p>
-        <textarea rows="4" class="code"><div class="input-group input-prefix">
+        <textarea rows="4" class="doc-code"><div class="input-group input-prefix">
     <span class="add">用户信息：</span>
     <input type="text" class="input-text" placeholder="输入文本信息">
 </div></textarea> 
 
         <p class="doc-tt">带后缀输入框</p>
-        <textarea rows="4" class="code"><div class="input-group input-suffix">
+        <textarea rows="4" class="doc-code"><div class="input-group input-suffix">
     <input type="text" class="input-text" placeholder="输入文本信息">
     <span class="add">KB</span>
 </div></textarea> 
 
         <p class="doc-tt">带前后缀输入框</p>
-        <textarea rows="5" class="code"><div class="input-group input-prefix input-suffix">
+        <textarea rows="5" class="doc-code"><div class="input-group input-prefix input-suffix">
     <span class="add">用户信息：</span>
     <input type="text" class="input-text" placeholder="输入文本信息">
     <span class="add">KB</span>
 </div></textarea> 
 
+        <p class="doc-tt">日期选择框：</p>
+        <textarea rows="1" class="doc-code"><input type="text" class="input-text laydate-icon" id="date" placeholder="选择日期" ></textarea> 
+
         <p class="doc-tt">单选按钮组</p>
-        <textarea rows="8" class="code"><div class="radio-group">
+        <textarea rows="8" class="doc-code"><div class="radio-group">
     <input type="radio" class="input-radio" name="radio" id="radio1">
     <label class="radio-label" for="radio1">iMac</label>
     <input type="radio" class="input-radio" name="radio" id="radio3">
@@ -205,7 +189,7 @@ fieldset>legend{
 </div></textarea> 
 
         <p class="doc-tt">多选按钮组</p>
-        <textarea rows="10" class="code"><div class="checkbox-group">
+        <textarea rows="10" class="doc-code"><div class="checkbox-group">
     <input type="checkbox" class="input-checkbox" name="checkbox" id="checkbox1">
     <label class="checkbox-label" for="checkbox1">深圳</label>
     <input type="checkbox" class="input-checkbox" name="checkbox" id="checkbox2" checked="checked">
@@ -217,7 +201,7 @@ fieldset>legend{
 </div></textarea> 
 
         <p class="doc-tt">按钮</p>
-        <textarea rows="3" class="code"><button class="btn" type="submit">button按钮</button>
+        <textarea rows="3" class="doc-code"><button class="btn" type="submit">button按钮</button>
 <a class="btn" href="#">a按钮</a>
 <input class="btn" type="button" value="input按钮" /></textarea> 
     </div>
@@ -225,7 +209,7 @@ fieldset>legend{
 
     <!--css document-->
     <div id="css" class="hide">
-        <textarea cols="100" rows="25" class="code">/* 默认input输入框 和 textarea 文本框*/
+        <textarea cols="100" rows="25" class="doc-code">/* 默认input输入框 和 textarea 文本框*/
 .input-text,.textarea{
     line-height: 20px;
     padding: 2px 6px;
@@ -468,33 +452,24 @@ fieldset>legend{
 
     <!--js document-->
     <div id="js" class="hide">
-        <textarea cols="100" rows="25" class="code">
-        </textarea> 
+        <p class="doc-tt">日期选择框：</p>
+        <textarea rows="6" class="doc-code"><script src="/static/lib/laydate/laydate.dev.js"></script>
+<script>
+laydate({
+    elem: '#date'
+});
+</script></textarea> 
+        <p class="doc-ft"><cite title="一款原生的日期控件">laydate.js</cite> 详细参数请查询 <a class="link" href="http://laydate.layui.com" target="_blank">http://laydate.layui.com</a></p>
     </div>
     <!--/js document-->
 </div>
 
-
+<script src="/static/lib/jquery-1.8.3.min.js"></script>
 <script src="/static/lib/laydate/laydate.dev.js"></script>
+<script src="/js/iframe.js"></script>
 <script>
 laydate({
-	elem: '#birthday'
-});
-
-</script>
-<script src="/static/lib/jquery-1.8.3.min.js"></script>
-<script>
-$(function(){
-    var clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
-    $('.aside-left').height(clientHeight-40);
-    var tab = $('#tab'),
-        tabItm = tab.find('li');
-    tabItm.on('click',function(){
-        var anchor = $(this).attr('data-anchor');
-        $(this).addClass('active').siblings().removeClass('active');
-        $('#'+anchor).show().siblings().hide();
-    });
-    
+    elem: '#date'
 });
 </script>
 </body>

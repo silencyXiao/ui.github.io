@@ -23,14 +23,14 @@ body{
 }
 .header .logo{
 	float: left;
-	width: 215px;
+	width: 175px;
 	height: 40px;
-	padding-left: 10px;
-	margin-right: 30px;
+	padding-left: 20px;
+	margin-right: 20px;
 }
 .header .main-nav{
 	float: left;
-	width: 600px;
+	width: 430px;
 	height:40px;
 	line-height: 40px;
 }
@@ -50,14 +50,14 @@ body{
 	position: relative;
 	z-index: 10;
 	float: right;
-	width: 362px;
+	width: 322px;
 	height: 32px;
-	margin-right: 50px;
+	margin-right: 30px;
 	margin-top:4px; 
 }
 .search-form .input-search{
 	float: right;
-	width: 200px;
+	width: 160px;
 	height: 20px;
 	line-height: 20px;
 	padding:5px 40px 5px 20px;
@@ -75,7 +75,7 @@ body{
 
 }
 .search-form .input-search:focus{
-	width: 300px;
+	width: 260px;
 	border-color: #999;
 	background-color: #fff;
 	color: #666;

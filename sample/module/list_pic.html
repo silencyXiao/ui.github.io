@@ -4,28 +4,9 @@
 <meta charset="UTF-8">
 <title>list图文列表</title>
 <link href="/static/style/reset.css" rel="stylesheet">
+<link href="/css/iframe.css" rel="stylesheet">
 <link href="css/list_pic.css" rel="stylesheet">
-</head>
-<style>
-body{ background-color: #f1f1f1; font-family: 'Microsoft Yahei'; }
-.aside-left{  position: fixed; top: 0; left: 0; float: left; width: 200px; padding:20px; border-right:1px solid #ccc; background-color: #fff; }
-.form-filter{ margin-bottom: 20px; }
-.form-filter .form-item{ height: 30px; line-height: 30px; margin-bottom: 5px; }
-.form-filter .form-item label{ float: left; width: 7em; height: 30px; line-height: 30px; text-align: right; }
-.form-filter .form-item input{ width: 100px; height: 18px; padding:2px;
-}
-
-.tab{ height: 30px; padding-left: 10px; border-bottom: 1px solid #ccc; margin-bottom: 20px;}
-.tab li{ float: left; height: 30px; line-height: 30px; padding:0 10px; background-color: #fff; color: #999; font-size: 13px; cursor: pointer; }
-.tab li:hover{ color: #666; }
-.tab li.active{ position: relative; top: 0; border:1px solid #ccc; border-radius: 3px 3px 0 0; border-bottom: 0; color: #333; }
-
-.abstract{ padding:10px; border:1px solid #FBEED5; border-radius: 3px; background-color: #FCF8E3; color: #c09853;}
-.abstract p{ margin-bottom: 5px; }
-
-.container{ margin-left: 240px; padding:20px;}
-.code{ display: block; width: 95%; padding:10px; border:1px solid #e1e1e8; border-radius:5px; margin:10px; background-color: #f7f7f9; font-size: 13px; line-height: 20px; color: #333; font-family: 'Microsoft Yahei';}
-</style> 
+</head> 
 <body>
 <div class="aside-left">
 	<ul class="tab" id="tab">
@@ -144,7 +125,7 @@ body{ background-color: #f1f1f1; font-family: 'Microsoft Yahei'; }
 
 	<!--html document-->
 	<div id="html" class="hide">
-		<textarea cols="100" rows="25" class="code">
+		<textarea cols="100" rows="25" class="doc-code">
 <ul class="m-list-pic clearfix" id="list">
 	<li>
 		<div class="inner clearfix">
@@ -168,7 +149,7 @@ body{ background-color: #f1f1f1; font-family: 'Microsoft Yahei'; }
 
 	<!--css document-->
 	<div id="css" class="hide">
-		<textarea cols="100" rows="25" class="code">
+		<textarea cols="100" rows="25" class="doc-code">
 .m-list-pic{ width: 1020px; margin:-10px; }
 .m-list-pic li{ float: left; width: 320px; padding: 10px;}
 .m-list-pic li .inner{ width: 320px; background-color: #fff; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);}
@@ -196,7 +177,7 @@ body{ background-color: #f1f1f1; font-family: 'Microsoft Yahei'; }
 
 	<!--js document-->
 	<div id="js" class="hide">
-		<textarea cols="100" rows="25" class="code">
+		<textarea cols="100" rows="25" class="doc-code">
 		</textarea>	
 	</div>
 	<!--/js document-->
@@ -204,18 +185,9 @@ body{ background-color: #f1f1f1; font-family: 'Microsoft Yahei'; }
 
 
 <script src="/static/lib/jquery-1.8.3.min.js"></script>
+<script src="/js/iframe.js"></script>
 <script>
-$(function(){
-	var clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
-	$('.aside-left').height(clientHeight-40);
-	var tab = $('#tab'),
-		tabItm = tab.find('li');
-	tabItm.on('click',function(){
-		var anchor = $(this).attr('data-anchor');
-		$(this).addClass('active').siblings().removeClass('active');
-		$('#'+anchor).show().siblings().hide();
-	});
-	
+$(function(){	
 	var column = $('#column'),
 		picScale =  $('#picScale'),
 		spacing = $('#spacing'),
